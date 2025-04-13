@@ -1,47 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-
+!DOCTYPE html>
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leyl Art House</title>
- 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leyl Art House</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Arial', sans-serif; background:#fff0f5; color:#333; }
+  header { background:#e75480; color:#fff; padding:20px 0; text-align:center; position:sticky; top:0; z-index:999;}
+  nav { display:flex; justify-content:center; background:#f08080; }
+  nav a { color:#fff; padding:15px 20px; text-decoration:none; }
+  nav a:hover { background:#ffa6c9; }
+  section { padding:40px 20px; max-width:1200px; margin:auto; }
+  .slider img { width:100%; border-radius:10px; margin-bottom:20px; }
+  h2 { margin-bottom:20px; font-size:28px; color:#e75480; }
+  .cards { display:flex; flex-wrap:wrap; gap:20px; }
+  .card { flex:1; min-width:260px; background:#ffe4e1; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.05); text-align:center; }
+  .card img { width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:10px; }
+  .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:15px; }
+  .gallery img { width:100%; border-radius:8px; cursor:pointer; }
+  .events p, .about p { margin-bottom:15px; line-height:1.5; }
+  form { background:#ffe4e1; padding:20px; border-radius:10px; }
+  form input, form select, form textarea { width:100%; padding:10px; margin:10px 0; border:1px solid #f08080; border-radius:5px; }
+  form input[type="submit"] { background:#e75480; color:#fff; border:none; cursor:pointer; }
+  form input[type="submit"]:hover { background:#ffa6c9; }
+  footer { background:#e75480; color:#fff; padding:20px; text-align:center; margin-top:30px; }
+  .social a { color:#fff; margin:0 10px; text-decoration:none; font-size:20px; }
+</style>
 </head>
-
 <body>
 
+<header>
+  <h1>Leyl Art House</h1>
+  <p>Sanatın Kalbinde Buluşalım!</p>
+</header>
 
-    <h1>Leyl Art House </h1>
+<nav>
+  <a href="#slider">Anasayfa</a>
+  <a href="#about">Hakkımızda</a>
+  <a href="#collections">Koleksiyonlar</a>
+  <a href="#gallery">Galeri</a>
+  <a href="#events">Etkinlikler</a>
+  <a href="#tickets">Bilet Al</a>
+  <a href="#contact">İletişim</a>
+</nav>
 
-    <img src="https://img.freepik.com/free-vector/night-ocean-landscape-full-moon-stars-shine_107791-7397.jpg" alt="" width="1000" height="200">
-    <div class="content">
-        <div class="post">
-            <h2>Antik Mısır’ın Gizemli Dünyası</h2>
-            <p>Antik Mısır, tarihin en etkileyici medeniyetlerinden biriydi. Mısır Piramitleri, büyüleyici yapılarıyla
-                bugüne kadar hayranlıkla izlenmektedir. Bu yazımızda, Mısır’daki en ünlü müzeler ve sergiler
-                hakkında bilgi vereceğiz.</p>
-        </div>
+<section id="slider" class="slider">
+  <img src="https://via.placeholder.com/1200x500/ffa6c9/fff?text=Sanat+Slider+1" alt="">
+  <img src="https://via.placeholder.com/1200x500/f08080/fff?text=Sanat+Slider+2" alt="">
+</section>
 
-        <div class="post">
-            <h2>Sanatın Başkenti: Paris</h2>
-            <p>Paris, sanat ve kültürün merkezi olma özelliğini taşıyor. Louvre Müzesi, dünyanın en büyük ve
-                en ünlü sanat galerilerinden biridir. İçerisinde yer alan "Mona Lisa" gibi efsanevi eserler, her yıl
-                milyonlarca turistin ilgisini çekmektedir.</p>
-        </div>
-        <div class="post">
-            <h2>Günümüz Modern Sanat Müzeleri</h2>
-            <p>Modern sanat, son yıllarda dünyanın dört bir yanında sergileniyor. Günümüzde, dijital sanat
-                galerileri ve interaktif sergiler, ziyaretçilerine yeni bir deneyim sunuyor. Bu yazımızda, çağdaş
-                sanat müzeleri hakkında bilgi alabilirsiniz.</p>
-        </div>
+<section id="about" class="about">
+  <h2>Hakkımızda</h2>
+  <p>Leyl Art House; modern, klasik ve dijital sanat eserlerini bir araya getiren bağımsız bir sanat evidir. 
+  Şehrin kültürel kalbi olan merkezimizde her yıl onlarca sergi ve etkinlik düzenlenir.</p>
+  <p>Kurucumuz Leyl Yıldız'ın vizyonuyla, sanatın herkes için ulaşılabilir olmasını hedefliyoruz.</p>
+</section>
+
+<section id="collections">
+  <h2>Koleksiyonlar</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250/ffc0cb/000?text=Modern+Sanat" alt="">
+      <h3>Modern Sanat</h3>
     </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250/ffe4e1/000?text=Anadolu+Sanatı" alt="">
+      <h3>Anadolu Sanatı</h3>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250/ffc0cb/000?text=Fotoğraf+Sanatı" alt="">
+      <h3>Fotoğraf Sanatı</h3>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x250/ffe4e1/000?text=Dijital+Sanat" alt="">
+      <h3>Dijital Sanat</h3>
+    </div>
+  </div>
+</section>
 
+<section id="gallery">
+  <h2>Galeri</h2>
+  <div class="gallery">
+    <img src="https://via.placeholder.com/400x300/ffa6c9/000?text=Eser+1" onclick="openPopup(this.src)">
+    <img src="https://via.placeholder.com/400x300/f08080/fff?text=Eser+2" onclick="openPopup(this.src)">
+    <img src="https://via.placeholder.com/400x300/ffc0cb/000?text=Eser+3" onclick="openPopup(this.src)">
+    <img src="https://via.placeholder.com/400x300/ffe4e1/000?text=Eser+4" onclick="openPopup(this.src)">
+  </div>
+</section>
 
+<section id="events" class="events">
+  <h2>Yaklaşan Etkinlikler</h2>
+  <p><strong>20 Nisan 2025:</strong> "Sanat ve Zaman" Modern Sergi Açılışı</p>
+  <p><strong>1 Mayıs 2025:</strong> Sokak Sanatı Atölyesi</p>
+  <p><strong>15 Mayıs 2025:</strong> Fotoğraf Gösterimi ve Söyleşi</p>
+</section>
 
-    <li><a href="hakkımızda.html">Hakkımızda</a></li>
+<section id="tickets">
+  <h2>Bilet Al</h2>
+  <form>
+    <input type="text" placeholder="Ad Soyad" required>
+    <input type="email" placeholder="E-posta" required>
+    <select required>
+      <option value="">Etkinlik Seçin</option>
+      <option value="sergi">Sanat ve Zaman Sergisi</option>
+      <option value="atolye">Sokak Sanatı Atölyesi</option>
+    </select>
+    <select required>
+      <option value="">Bilet Tipi</option>
+      <option value="tam">Tam</option>
+      <option value="ogrenci">Öğrenci</option>
+      <option value="vip">VIP</option>
+    </select>
+    <textarea placeholder="Notunuz" rows="4"></textarea>
+    <input type="submit" value="Bileti Gönder">
+  </form>
+</section>
 
-    <!-- <p> buraya tıklayıp php kursuna gidebilirsiniz <a href="https://google.com.tr/" target="blank">buraya tıklayın</a> --></p>
-    <p>&copy; 2025 Leyl Art House | Tüm Haklar Saklıdır</p>
+<section id="contact">
+  <h2>İletişim</h2>
+  <p><strong>Adres:</strong> Sanatçılar Sokak No:8, İstanbul</p>
+  <p><strong>Telefon:</strong> 0212 456 78 90</p>
+  <p><strong>E-posta:</strong> info@leylarthouse.com</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Leyl Art House. Tüm Hakları Saklıdır.</p>
+  <div class="social">
+    <a href="#">Instagram</a> | 
+    <a href="#">Facebook</a> | 
+    <a href="#">YouTube</a>
+  </div>
+</footer>
+
+<script>
+  function openPopup(src) {
+    const popup = window.open("", "popup", "width=800,height=600");
+    popup.document.write("<img src='"+src+"' style='width:100%'>");
+  }
+</script>
+
 </body>
-
 </html>
