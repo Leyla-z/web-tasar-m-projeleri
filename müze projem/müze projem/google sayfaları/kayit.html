@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KAYIT GİRİŞİ</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>KAYIT GİRİŞİ</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a target="_blank" href="iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section>
+    <div>
+      <form id="registerForm" action="#" method="post">
+        <label for="username">Kullanıcı Adı:</label>
+        <input type="text" id="username" name="username" required />
+        
+        <label for="email">E-posta:</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="password">Şifre:</label>
+        <input type="password" id="password" name="password" required />
+        <small id="password-strength"></small>
+
+        <input type="submit" value="Kayıt Ol" />
+      </form>
+
+      <div class="back-button-container">
+        <a href="index.html" class="back-button">Anasayfaya Geri Dön</a>
+      </div>
+
+      <!-- Gece Modu Butonu -->
+      <button id="darkModeToggle">Gece Modu</button>
+    </div>
+  </section>
+
+  <footer style="margin-top: 100px;">
+    <p>&copy; 2024 UNBELIEVABLE MUSEUM. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('registerForm');
+
+    form.addEventListener('submit', function (e) {
+      const username = document.getElementById('username').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+
+      if (!username || !email || !password) {
+        e.preventDefault();
+        alert("Lütfen tüm alanları doldurunuz.");
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        e.preventDefault();
+        alert("Lütfen geçerli bir e-posta adresi giriniz.");
+        return;
+      }
+
+      if (password.length < 6) {
+        e.preventDefault();
+        alert("Şifreniz en az 6 karakter olmalıdır.");
+        return;
+      }
+
+      e.preventDefault();
+      alert("Kayıt başarıyla tamamlandı!");
+      form.reset();
+      document.getElementById('password-strength').textContent = '';
+    });
+
+    // Şifre güç göstergesi
+    document.getElementById('password').addEventListener('input', function () {
+      const strength = document.getElementById('password-strength');
+      const val = this.value;
+
+      if (val.length < 6) {
+        strength.textContent = 'Zayıf';
+        strength.style.color = 'red';
+      } else if (val.length < 10) {
+        strength.textContent = 'Orta';
+        strength.style.color = 'orange';
+      } else {
+        strength.textContent = 'Güçlü';
+        strength.style.color = 'green';
+      }
+    });
+
+    // Geri Dön butonu hover efekti
+    const backBtn = document.querySelector('.back-button');
+
+    backBtn.addEventListener('mouseover', function () {
+      this.style.backgroundColor = '#ddd';
+      this.style.color = '#000';
+    });
+
+    backBtn.addEventListener('mouseout', function () {
+      this.style.backgroundColor = '#eee';
+      this.style.color = '#333';
+    });
+
+    // Gece Modu toggle
+    const darkModeBtn = document.getElementById('darkModeToggle');
+    darkModeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>

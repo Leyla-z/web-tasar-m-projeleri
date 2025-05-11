@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyl Art House</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SANAT GALERİMİZE HOŞ GELDİNİZ</h1>
+        <p>UNBELIEVABLE MUSEUM</p>
+        <nav>
+            <ul class="nav-links">
+                <li><a target="_blank" href="iletisim.html"><button>İletişim</button></a></li>
+                <li><a target="_blank" href="kayit.html"><button>Üye Ol</button></a></li>
+                <li><a target="_blank" href="tarihce.html"><button>Tarihçe</button></a></li>
+                <li><a target="_blank" href="sanatcilar.html"><button>Sanatçılar</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div>
+            <h2>PABLO PİCASSO ESERLERİ</h2>
+            <div class="tooltip">
+                <img src="https://www.oggusto.com/_next/image?url=https%3A%2F%2Fwp.oggusto.com%2Fwp-content%2Fuploads%2F2023%2F04%2Fpablo-picasso-hayati-eserleri-ve-bilinmeyenleri.webp&w=3840&q=75" alt="">
+                <span class="tooltiptext">Pablo Picasso'nun ünlü eserlerine göz atın</span>
+            </div>
+            <ul class="exhibit-list">
+                <li><a href="guernica.html" target="_blank">GUERNİCA - Reina Sofia Müzesi, Madrid</a></li>
+                <li><a href="avingolukızlar.html" target="_blank">AVİNGOLU KIZLAR - Modern Sanatlar Müzesi, New York</a></li>
+                <li><a href="ruya.html" target="_blank">RÜYA - Steve Cohen (İş Adamı)</a></li>
+                <li><a href="koredekatliam.html" target="_blank">KOREDE KATLİAM - Picasso Müzesi, Paris</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>LEONARDO DA VİNCİ ESERLERİ</h2>
+            <div class="tooltip">
+                <img src="https://ivasanat.com/blog/wp-content/uploads/2024/11/da-vinci.webp" alt="">
+                <span class="tooltiptext">Leonardo da Vinci'nin başyapıtları burada</span>
+            </div>
+            <ul class="exhibit-list">
+                <li><a href="monalisa.html" target="_blank">MONA LİSA - Louvre Müzesi</a></li>
+                <li><a href="vitruvitusadam.html" target="_blank">VİTRUVİTUS ADAMI - Gallerie dell'Accademia, Venedik</a></li>
+                <li><a href="sonyemek.html" target="_blank">SON AKŞAM YEMEĞİ - Santa Maria Dele Grazie, Milano</a></li>
+                <li><a href="kakimlikadin.html" target="_blank">KAKIMLI KADIN - Czartoryski Müzesi, Polonya</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>VİNCENT VAN GOGH ESERLERİ</h2>
+            <div class="tooltip">
+                <img src="https://www.oggusto.com/_next/image?url=https%3A%2F%2Fwp.oggusto.com%2Fwp-content%2Fuploads%2F2022%2F08%2Fvincent-van-gogh-hayati-eserleri-ve-bilinmeyenleri.webp&w=3840&q=75" alt="">
+                <span class="tooltiptext">Van Gogh'un renkli dünyasını keşfedin</span>
+            </div>
+            <ul class="exhibit-list">
+                <li><a href="yildizligece.html" target="_blank">YILDIZLI GECE - Modern Sanatlar Müzesi, New York</a></li>
+                <li><a href="patatesyiyenler.html" target="_blank">PATATES YİYENLER - Van Gogh Müzesi, Amsterdam</a></li>
+                <li><a href="irisler.html" target="_blank">İRİSLER - J. Paul Getty Müzesi, Los Angeles</a></li>
+                <li><a href="bugdaykarga.html" target="_blank">BUĞDAY TARLASI VE KARGALAR - Van Gogh Müzesi, Amsterdam</a></li>
+                <li><a href="kafeterastagece.html" target="_blank">KAFE TERASTA GECE - Kröller-Müller Müzesi, Hollanda</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="infoModal">
+        <div class="modal-content">
+            <span id="closeModal">&times;</span>
+            <h3>Sanat galerimize hoş geldiniz</h3>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Unbelievable Museum. Telif hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('infoModal');
+            const closeBtn = document.getElementById('closeModal');
+            const navButtons = document.querySelectorAll('.nav-links button');
+
+            navButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    modal.style.display = 'block';
+                    const targetURL = btn.closest('a').href;
+                    setTimeout(() => {
+                        window.open(targetURL, '_blank');
+                        modal.style.display = 'none';
+                    }, 2000);
+                });
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (e) => {
+if (e.target === modal) {
+modal.style.display = 'none';
+}
+});
+});
+</script>
+
+</body> </html> ```

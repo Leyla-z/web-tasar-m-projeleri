@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UNBELIEVABLE MUSEUM</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>SANAT GALERİMİZE HOŞ GELDİNİZ</h1>
+    <nav>
+      <ul class="nav-links">
+        <!-- Bağlantılar eklenebilir -->
+      </ul>
+    </nav>
+  </header>
+
+  <h2>Müze Tarihçesi: UNBELIEVABLE MUSEUM</h2>
+
+  <p id="history-text" style="max-height: 200px; overflow: hidden;">
+    Sanatın büyüleyici dünyasına adım atanlar için bir kapı açan "UNBELIEVABLE MUSEUM", 2005 yılında kültür ve sanat tutkunları için bir buluşma noktası olarak İstanbul'un kalbinde kuruldu. Müzemiz, sanatın evrenselliğine olan inancıyla yola çıktı ve herkesin sanatla iç içe olabileceği bir ortam oluşturmayı amaçladı.
+    Kuruluşumuzdan bu yana, dünya çapında ünlü sanatçıların eserlerini sergileyerek sanatseverlere ilham vermeyi ve eğitmeyi hedefledik. Eserlerimiz aracılığıyla, ziyaretçilerimizi sanatın derinliklerine ve çeşitliliğine bir yolculuğa çıkarmayı ve sanatın gücünü ve etkisini keşfetmeye teşvik etmeyi amaçlıyoruz.
+    Müze koleksiyonumuzda, farklı dönemlerden ve tarzlardan eserlere ev sahipliği yapıyoruz. Rönesans'tan modern döneme, resimden heykele, fotoğraftan enstalasyona kadar geniş bir yelpazede sanat eserlerini ziyaretçilerimizin beğenisine sunuyoruz.
+    Ayrıca, özel sergiler, atölye çalışmaları, konferanslar ve etkinlikler düzenleyerek, sanatseverlerin sanatı daha yakından deneyimlemelerini sağlıyoruz. Bu etkinlikler, sanatın sadece bir izleyici sporu olmadığını, aynı zamanda katılımcı bir deneyim olduğunu vurgulamaktadır.
+    "UNBELIEVABLE MUSEUM" Müzesi olarak, sanatın insan hayatında nasıl bir rol oynadığını ve nasıl bir ilham kaynağı olduğunu anlamak için ziyaretçilerimizi bekliyoruz. Herkesin sanatla dolu bir yaşam sürmesini ve sanatın gücünü keşfetmesini diliyoruz.
+  </p>
+
+  <button id="toggle-history">Devamını Oku</button>
+  <button id="darkModeToggle">Gece Modu</button>
+
+  <div class="back-button-container">
+    <a href="index.html" class="back-button">Anasayfaya Geri Dön</a>
+  </div>
+
+  <footer style="margin-top: 100px;">
+    <p>&copy; 2024 Unbelievable Museum. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Müze tarihçesi gizle/göster
+    const toggleBtn = document.getElementById("toggle-history");
+    const historyText = document.getElementById("history-text");
+    let expanded = false;
+
+    toggleBtn.addEventListener("click", () => {
+      if (!expanded) {
+        historyText.style.maxHeight = "none";
+        toggleBtn.textContent = "Gizle";
+      } else {
+        historyText.style.maxHeight = "200px";
+        toggleBtn.textContent = "Devamını Oku";
+      }
+      expanded = !expanded;
+    });
+
+    // Gece modu
+    document.getElementById("darkModeToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>
